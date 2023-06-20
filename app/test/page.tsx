@@ -6,15 +6,17 @@ const prefix = "https://mohamednehad450.github.io/test-next-link";
 export default function Test() {
   const router = useRouter();
   return (
-    <main className="p-8 text-2xl flex flex-col gap-4">
-      <Link href={"/"}>Home</Link>
-      <Link href={prefix + "/"}>Home {"(with assetPrefix)"}</Link>
-      <button onClick={() => router.push("/")}>Home (with useRouter)</button>
+    <main className="p-8 text-2xl flex flex-col gap-4 text-center">
+      <Link href={"/"}>{`<Link href={"/"}>`}</Link>
+      <Link href={prefix + "/"}>{`<Link href={prefix + "/"}>`}</Link>
+      <button
+        onClick={() => router.push("/")}
+      >{`<button onClick={() => router.push("/")}>`}</button>
       <button onClick={() => router.push(prefix + "/")}>
-        Home {"(with useRouter with assetPrefix)"}
+        {`<button onClick={() => router.push(prefix + "/")}>`}
       </button>
-      <a href="/">Home {"(with <a> tag)"}</a>
-      <a href={prefix + "/"}>Home {"(with <a> tag) and assetPrefix"}</a>
+      <a href="/">{`<a href={"/"}> (doesn't work understandably)`}</a>
+      <a href={prefix + "/"}>{`<a href={prefix + "/"}>`}</a>
     </main>
   );
 }
