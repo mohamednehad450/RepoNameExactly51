@@ -8,10 +8,10 @@ export default function Test() {
   return (
     <main className="p-8 text-2xl flex flex-col gap-4">
       <Link href={"/"}>Home</Link>
-      <Link href={prefix + "/"}>Home (with assetPrefix)</Link>
+      <Link href={prefix + "/"}>Home {"(with assetPrefix)"}</Link>
       <button onClick={() => router.push("/")}>Home (with useRouter)</button>
       <button onClick={() => router.push(prefix + "/")}>
-        Home (with useRouter with assetPrefix)
+        Home {"(with useRouter with assetPrefix)"}
       </button>
       <a href="/">Home {"(with <a> tag)"}</a>
       <a href={prefix + "/"}>Home {"(with <a> tag) and assetPrefix"}</a>
