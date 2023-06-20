@@ -2,10 +2,10 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import getConfig from "next/config";
+const config = getConfig();
 
 export default function Test() {
   const router = useRouter();
-  const config = getConfig();
   return (
     <main className="p-8 text-2xl flex flex-col gap-4">
       <Link href={"/"}>Home</Link>
